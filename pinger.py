@@ -7,7 +7,7 @@ import datetime
 up_interval=3
 down_interval=1
 if len(sys.argv)==1:
-    ip_addr="192.168.0.199"
+    ip_addr="8.8.8.8"
 else:
     ip_addr=sys.argv[1]
 status="unknown"
