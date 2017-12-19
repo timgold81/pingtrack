@@ -4,7 +4,7 @@ This program tracks IP address for reachability.
 It pings the destination IP and if the IP stoped or started to answer to pings, the program outputs current time.
 
 Usage:
-./pinger.py <DESTINATION IP>
+./pinger.py DESTINATION
 
 Example:
 ./pinger.py 192.168.0.199                      
