@@ -19,9 +19,9 @@ signal.signal(signal.SIGINT,signal_handler)
 
 parser=argparse.ArgumentParser(description="Ping tracker of a host. Shows the time when the host went UP or DOWN")
 parser.add_argument("-s","--host",help="Host name or IP address. Default = 8.8.8.8")
-parser.add_argument("-d","--down",help="How many ping get lost, until the host declared as DOWN. Default=3")
+parser.add_argument("-d","--down",help="How many pings get lost, until the host declared as DOWN. Default=3")
 parser.add_argument("-o","--down_interval",help="Interval between pings when host is down. Default=1")
-parser.add_argument("-u","--up_interval",help="Interval between pings when host is up. Default = 1")
+parser.add_argument("-u","--up_interval",help="Interval between pings when host is up. Default=1")
 args=parser.parse_args()
 
 if args.host:

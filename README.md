@@ -1,14 +1,26 @@
 # pingtrack
 
-This program tracks IP address for reachability.
-It pings the destination IP and if the IP stoped or started to answer to pings, the program outputs current time.
+usage: pinger.py [-h] [-s HOST] [-d DOWN] [-o DOWN_INTERVAL] [-u UP_INTERVAL]
 
-Usage:<br />
-./pinger.py DESTINATION
+Ping tracker of a host. Shows the time when the host went UP or DOWN
 
-Example:<br />
-./pinger.py 192.168.0.199                      
-system 192.168.0.199 up at 2017-12-19 20:59:44.214381<br />
-system 192.168.0.199 down at 2017-12-19 21:00:28.456275<br />
-system 192.168.0.199 up at 2017-12-19 21:00:33.487281<br />
+optional arguments:
+  -h, --help            show this help message and exit
+  -s HOST, --host HOST  Host name or IP address. Default = 8.8.8.8
+  -d DOWN, --down DOWN  How many ping get lost, until the host declared as
+                        DOWN. Default=3
+  -o DOWN_INTERVAL, --down_interval DOWN_INTERVAL
+                        Interval between pings when host is down. Default=1
+  -u UP_INTERVAL, --up_interval UP_INTERVAL
+                        Interval between pings when host is up. Default=1
 
+Example:
+tim@tim-stat:~/python/pingtrack$ ./pinger.py -s 10.0.2.31
+Tracking 10.0.2.31:
+system 10.0.2.31 up at 2018-04-02 10:37:05.976400
+system 10.0.2.31 down at 2018-04-02 10:37:19.039902
+system 10.0.2.31 up at 2018-04-02 10:37:26.063647
+^C
+Stopping pinger. Thanks for using.
+Please visit https://github.com/timgold81/
+contact timgold@gmail.com
