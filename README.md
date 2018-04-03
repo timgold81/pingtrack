@@ -14,9 +14,11 @@ optional arguments:
                         Interval between pings when host is down. Default=1
   -u UP_INTERVAL, --up_interval UP_INTERVAL
                         Interval between pings when host is up. Default=1
+
+  To stop monitoring press CTRL+C
 </pre>
 
-# Example:<br />
+## Example
 <pre>
 tim@tim-stat:~/python/pingtrack$ ./pinger.py -s 10.0.2.31
 Tracking 10.0.2.31:
