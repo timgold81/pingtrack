@@ -49,9 +49,9 @@ prev_status="unknown"
 down_cnt=down_counter
 loop=1
 
-if  platform.system()=="Windows":
-    print ("Pingtracker down no operate well under Windows")
-    print ("Try linux or ubuntu under Windows 10")
+#if  platform.system()=="Windows":
+#    print ("Pingtracker down no operate well under Windows")
+#    print ("Try linux or ubuntu under Windows 10")
 
 print ("Tracking "+ip_addr +":")
 
