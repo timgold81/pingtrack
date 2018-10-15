@@ -9,22 +9,22 @@ import platform
 
 def signal_handler(signal,frame):
     # global conf
-    conf.loop=0
+    pinger.loop=0
     print ("\nStopping pinger. Thanks for using.")
     print ("Please visit https://github.com/timgold81/")
     print ("contact timgold@gmail.com\n")
 
 
 
-class configuration:
+class Pinger:
     status="unknown"
     prev_status="unknown"
-    down_counter=1
-    down_cnt=0
-    down_interval=0
-    up_interval=0
+    down_counter=3
+    down_cnt=3
+    down_interval=1
+    up_interval=1
     loop=1
-    ip_addr=""
+    ip_addr="8.8.8.8"
 
 
     def handle_args(self):
@@ -61,7 +61,7 @@ class configuration:
         self.down_cnt=self.down_counter
         self.loop=1
 
-    def main(self):
+    def start(self):
         print ("Tracking "+self.ip_addr +":")
         while self.loop:
             # print ("DEBUG$$$: status: "+status+" prev_status:"+prev_status)
@@ -95,7 +95,7 @@ class configuration:
 
 if __name__=="__main__":
     signal.signal(signal.SIGINT,signal_handler)
-    global conf
-    conf=configuration()
-    conf.handle_args()
-    conf.main()
+    global pinger
+    pinger=Pinger()
+    pinger.handle_args()
+    pinger.start()
