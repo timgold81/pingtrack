@@ -41,7 +41,6 @@ class Pinger:
             self.ip_addr="8.8.8.8"
 
         if args.down:
-            
             self.down_counter=int(args.down)
         else:
             self.down_counter=3
